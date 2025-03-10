@@ -1,0 +1,25 @@
+O que é Inteligência Artificial (IA)?
+
+Existem diversas formas de explicar o que é Inteligência Artificial (IA), levando em consideração aspectos como raciocínio, comportamento, desempenho humano ou desempenho ideal.
+
+De acordo com o famoso Teste de Turing, uma máquina pode ser considerada inteligente se, em uma interação com um interrogador humano, este não conseguir distinguir se as respostas são provenientes de uma máquina ou de outra pessoa.
+
+Programar um computador para passar nesse teste é uma tarefa complexa, que exige que a máquina possua algumas capacidades essenciais, como:
+
+    Processamento de Linguagem Natural: para se comunicar em um idioma, como o português, por exemplo.
+
+    Representação de Conhecimento: para armazenar o que aprende ou ouve.
+
+    Raciocínio Automatizado: para utilizar o conhecimento adquirido e responder a perguntas, além de gerar novas informações.
+
+    Aprendizado de Máquina: para se adaptar a novas situações e identificar e extrapolar padrões.
+
+Além disso, existe uma versão mais avançada do teste, conhecida como Teste Total de Turing, onde o interrogador não apenas recebe respostas, mas também envia objetos e sinais de vídeo para a máquina, a fim de testar suas capacidades perceptivas. Para passar nesse teste, o computador precisa desenvolver novas habilidades, como:
+
+    Visão Computacional: para reconhecer e interpretar objetos.
+
+    Robótica: para manipular objetos e se movimentar de forma física no ambiente.
+
+Embora esse teste seja relevante, o principal objetivo é entender os princípios fundamentais da inteligência, e não apenas fazer com que a máquina passe em um exame específico.
+
+Se queremos determinar se um programa pensa como um ser humano, precisamos compreender como os humanos pensam. Para isso, podemos estudar nossos próprios pensamentos por meio de experimentos introspectivos, além de realizar experimentos psicológicos e usar imagens ou vídeos do cérebro em ação, obtidos com o auxílio de tecnologias médicas.

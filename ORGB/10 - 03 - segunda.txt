@@ -1,0 +1,98 @@
+Arquitetura de Von Neumann
+
+A arquitetura de Von Neumann é composta por três componentes principais:
+
+    CPU (Unidade Central de Processamento)
+    
+    Memória Principal
+    
+    Input/Output (Entrada/Saída)
+
+
+
+
+CPU:
+A CPU contém dois elementos fundamentais: o datapath e a FSM de controle (Máquina de Estados Finitos).
+
+Memória Principal:
+A memória principal armazena um número WW de palavras, com NN bits cada. Pode ser vista como um array: quando a CPU deseja acessar dados, ela envia o índice (endereço de memória) correspondente à memória. Após um pequeno atraso, a memória retorna o valor de NN-bits presente nesse endereço. Para escrever dados na memória, o processo é similar, mas invertido.
+
+Input/Output (Entrada/Saída):
+Esses componentes permitem que o computador se comunique com o mundo externo e acesse dados armazenados na memória secundária. Essa memória secundária possibilita que as informações sejam preservadas mesmo quando o computador está desligado.
+
+Ideia Principal da Arquitetura Von Neumann
+
+A principal característica dessa arquitetura é que a memória principal armazena tanto as instruções quanto os dados da CPU, ambos em formato binário. Quando um dado na memória é interpretado como uma instrução, ele contém um conjunto de campos codificados com bits que indicam a operação a ser executada pela CPU. A estrutura básica da instrução é:
+
+op | ra | rb | rc
+
+    op: Indica a operação a ser executada (como ADD, XOR, COMPARE, etc.).
+    
+    ra, rb, rc: Indicam os registradores que contêm os operandos para a operação, sendo que rb também armazena o resultado.
+
+Por exemplo, a operação seria:
+rc <- op(ra, rb)
+
+Além disso, alguns valores na memória representam dados como números ou strings. Quando a CPU precisa operar sobre esses valores, ela os carrega em seus registradores temporários, processa e, se necessário, escreve os resultados de volta na memória.
+
+Para diferenciar valores binários de instruções, a memória principal é segmentada em dois blocos: segmento de instruções e segmento de dados. Cada processo tem sua área delimitada para armazenar suas instruções e dados. Quando um valor é carregado no datapath, ele é interpretado como dado. Quando carregado pela unidade de controle, é interpretado como uma instrução.
+
+
+
+
+
+Anatomia de um Computador Von Neumann
+
+O datapath possui registradores que guardam dados. A CPU pode selecionar certos registradores para fornecer operandos para a ALU (Unidade Aritmética e Lógica), que executa operações sobre esses dados.
+
+A ALU realiza a operação e gera um resultado, além de outros sinais de status. O resultado pode ser armazenado em registradores para uso posterior. A ALU também pode interagir com a memória principal para ler ou escrever valores binários.
+
+A unidade de controle envia sinais para o datapath, como:
+
+    Seleção de registradores para os operandos.
+    Determinação de qual registrador armazenará o resultado final.
+    
+    O sinal FN, que indica qual operação será executada sobre os operandos (como soma, subtração, etc.).
+    A unidade de controle também carrega valores da memória principal e gerencia o program counter (contador de programa), que aponta para o endereço da próxima instrução a ser executada.
+
+
+
+
+
+
+ISA (Arquitetura de Conjunto de Instruções)
+
+A ISA é a interface entre o hardware e o software de baixo nível. Ela define:
+
+    Onde os operandos são armazenados (além da memória).
+    
+    O número de operandos em cada instrução.
+    
+    Quais operações o processador pode realizar.
+    
+    O tipo e o tamanho dos operandos.
+
+A ISA especifica tudo isso sem se preocupar com a implementação do hardware, o que simplifica a arquitetura do processador. Uma vantagem importante da ISA é permitir a implementação de hardware mais avançado, que ainda seja compatível com softwares mais antigos.
+
+No entanto, um desafio surge: como a ISA de muitos processadores modernos precisa ser compatível com designs de décadas passadas (especialmente dos anos 70), os processadores atuais muitas vezes carregam restrições e decisões de design que já não são ideais para a tecnologia atual.
+
+
+
+
+
+
+
+Gargalo de Von Neumann
+
+O famoso "gargalo de Von Neumann" refere-se à limitação na velocidade de comunicação entre a memória principal e o processador (CPU), que normalmente determina a velocidade geral do computador. A velocidade com que o processador decodifica e executa instruções é muito superior à velocidade com que a memória RAM pode transferir esses dados para a CPU.
+
+Isso pode fazer com que a CPU fique ociosa, aguardando os dados da memória. A velocidade do processador é determinada principalmente pelo seu clock (que indica quantos ciclos completos ele pode executar por segundo) e pelo número de núcleos, que aumenta a capacidade de paralelização.
+
+O clock do CPU sincroniza as operações do processador. Um ciclo de clock é o tempo entre o início e o fim de um ciclo de operação, como a leitura, decodificação e execução de uma instrução.
+
+Solução para o Gargalo:
+Para reduzir esse gargalo, pode-se melhorar a largura de banda dos barramentos ou utilizar memória CACHE.
+
+    Barramentos são os canais de comunicação entre a CPU e a memória RAM, com uma velocidade de transferência limitada.
+
+    Memória CACHE é uma memória muito mais rápida que a RAM, localizada dentro ou perto da CPU. Ela armazena cópias de dados frequentemente usados da RAM. Se um dado necessário já estiver na CACHE, o processador não precisará solicitar à memória RAM, o que acelera significativamente o acesso.

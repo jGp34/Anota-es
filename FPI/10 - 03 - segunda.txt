@@ -1,0 +1,77 @@
+Processamento Digital de Imagens
+
+1.1 O que é?
+Uma imagem pode ser definida como uma função bidimensional f(x,y)f(x,y), onde ff representa a intensidade ou o nível de cinza da imagem no ponto (x,y)(x,y). Os computadores são capazes de trabalhar com quase todo o espectro eletromagnético, o que possibilita a criação de imagens a partir de tecnologias como ultrassom, microscopia eletrônica, entre outras.
+
+Embora não haja uma definição rigorosa que separa o processamento de imagens da análise de imagens, pode-se dizer que o processamento de imagens lida com processos cujas entradas e saídas são imagens. Esse campo envolve desde a extração de atributos de imagens até o reconhecimento de objetos individuais.
+
+
+
+
+
+1.2 Origens
+O processamento de imagens teve suas origens na necessidade de obter fotos da Lua por espaçonaves, com o objetivo de estudá-las na Terra. Essa missão foi essencial para os cientistas que buscavam enviar o homem à Lua, o que exigiu correções nas imagens para proporcionar detalhes mais precisos.
+
+Alguns anos depois, o uso de imagens digitais na medicina tornou-se essencial para realizar diagnósticos e tratamentos mais eficazes. Foi nesse contexto, no início da década de 1970, que surgiu a invenção da tomografia axial computadorizada.
+
+1.4 Passos Fundamentais no Processamento Digital de Imagens
+É importante distinguir entre métodos que têm imagens como entrada e saída, e métodos que, embora possam ter imagens como entrada, resultam em atributos extraídos dessas imagens.
+
+    Aquisição de Imagens:
+    O primeiro passo fundamental é a aquisição de imagens, que pode ser simples, como a obtenção de uma imagem já digitalizada. Frequentemente, esse processo envolve um pré-processamento, como o redimensionamento da imagem.
+
+    Realce de Imagens:
+    O realce de imagens refere-se ao processo de manipular uma imagem de maneira que ela se torne mais adequada a uma aplicação específica, tornando-a visualmente mais útil.
+
+    Restauração de Imagens:
+    A restauração de imagens visa melhorar a qualidade visual de uma imagem, mas com base em modelos matemáticos ou probabilísticos que descrevem como a imagem foi degradada. Diferente do realce, a restauração é objetiva e não depende de preferências humanas.
+
+    Processamento de Imagens Coloridas:
+    Esse processo lida com a manipulação de cores e modelos de cores em um ambiente digital.
+
+    Wavelets:
+    As wavelets fornecem os fundamentos para a representação de imagens em vários níveis de resolução. Elas são especialmente importantes para a compressão de dados de imagens e para a representação piramidal, onde a imagem é sucessivamente subdividida em regiões menores.
+
+    Compressão:
+    A compressão de imagens envolve técnicas para reduzir o espaço de armazenamento necessário ou a largura de banda para a transmissão de uma imagem. Por exemplo, uma imagem .jpg utiliza o padrão de compressão JPEG.
+
+    Processamento Morfológico:
+    Esse processo usa ferramentas para extrair componentes das imagens que ajudam na representação e descrição das formas presentes.
+
+    Segmentação:
+    A segmentação divide uma imagem em suas partes ou objetos constituintes. Quanto mais precisa for a segmentação, maiores são as chances de sucesso no reconhecimento dos objetos.
+
+    Descrição:
+    A descrição envolve a extração de atributos da imagem que resultam em informações quantitativas, ou que podem ser usadas para distinguir uma classe de objetos de outra.
+
+    Reconhecimento:
+    O reconhecimento é o processo de atribuir um rótulo a um objeto com base em seus descritores.
+
+Observação: A Figura 1.23 do livro é particularmente interessante para ilustrar esses processos.
+
+
+
+
+
+
+1.5 Componentes de um Sistema de Processamento de Imagens
+No processo de sensoriamento, dois elementos são necessários para a aquisição de imagens digitais:
+
+    Um dispositivo sensível à energia irradiada pelo objeto.
+    Um digitalizador, responsável por converter a saída do dispositivo sensível para um formato digital.
+
+O hardware especializado em processamento de imagens geralmente consiste em um digitalizador, além de um componente capaz de realizar operações primárias, como uma unidade aritmética e lógica (ALU), que executa operações em paralelo em toda a imagem.
+
+O computador utilizado em sistemas de processamento de imagens pode ser desde um computador pessoal até um supercomputador.
+
+Software de Processamento de Imagens:
+O software utilizado inclui módulos especializados para diferentes tarefas, e pacotes mais sofisticados permitem integração com linguagens de programação, permitindo que o usuário escreva código customizado.
+
+Armazenamento em Massa:
+O armazenamento em massa é crucial, especialmente para imagens de grandes dimensões. Existem três tipos principais de armazenamento:
+
+    1. Curto Prazo: Usa memória ou placas de vídeo especializadas, como os frame buffers.
+    
+    2. On-line: Discos magnéticos ou mídias óticas com acesso frequente.
+    
+    3. Em Arquivo: Armazenamento com baixa frequência de acesso, como fitas magnéticas e discos óticos.
